@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Parser.h"
+#include "Node.h"
 
 using namespace std;
 
@@ -9,16 +10,18 @@ void Cmd(char& choice);
 
 int main() {
 	cout << "Bonjour bienvenue : " << endl << endl;
-	cout << "nom du fichier contenant les transitions : " << endl;
-	string transition;
-	getline(cin, transition);
+	
+	/*
 	cout << "nom du fichier contenant les limites : " << endl;
 	string limites;
 	getline(cin, limites);
+	cout << "nom du fichier contenant les transitions : " << endl;
+	string transition;
+	getline(cin, transition);
 	
-	Parser parser(limites, transition);
-	//Parser parser("./test8.afdC", "./test8_limite.afdC");
-	parser.Generate();
+	Parser parser(limites, transition);*/
+	Parser<int> parser("test8_limite.afdC", "test8.afdC");
+	Graph<int> graph = parser.Generate();
 
 	Help();
 	

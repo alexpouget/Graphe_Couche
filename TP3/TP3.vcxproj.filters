@@ -45,12 +45,4 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\Downloads\F1478020677_d3\DataTest\test8_limite.afdC">
-      <Filter>Fichiers de ressources</Filter>
-    </None>
-    <None Include="..\..\..\..\..\Downloads\F1478020677_d3\DataTest\test8.afdC">
-      <Filter>Fichiers de ressources</Filter>
-    </None>
-  </ItemGroup>
 </Project>

@@ -1,12 +1,14 @@
 #include "Graph.h"
 
 
-
-Graph::Graph()
+template<typename T>
+Graph<T>::Graph()
 {
 }
 
-
-Graph::~Graph()
+template<typename T>
+Graph<T>::~Graph()
 {
 }
+
+template class Graph<int>;

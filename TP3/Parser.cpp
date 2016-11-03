@@ -5,39 +5,46 @@
 
 using namespace std;
 
-Parser::Parser()
+template<typename T>
+Parser<T>::Parser()
 {
 	
 }
 
-Parser::Parser(string l, string t)
+template<typename T>
+Parser<T>::Parser(string l, string t)
 {
 	limite = l;
 	transition = t;
 }
 
-
-Parser::~Parser()
+template<typename T>
+Parser<T>::~Parser()
 {
 }
 
-Graph Parser::Generate()
+template<typename T>
+Graph<T> Parser<T>::Generate()
 {
 	string line;
 
-	ifstream inTransition(transition);
+	ifstream inTransition;
+	inTransition.open(transition);
 	while (inTransition) {
 		getline(inTransition, line);
 		cout << line << endl;
 	}
 	inTransition.close();
-
-	ifstream inLimite(limite);
+	cout << "limite : " << endl;
+	ifstream inLimite;
+	inLimite.open(limite);
 	while (inLimite) {
 		getline(inLimite, line);
 		cout << line << endl;
 	}
 	inLimite.close();
 
-	return Graph();
+	return Graph<T>();
 }
+
+template class Parser<int>;
