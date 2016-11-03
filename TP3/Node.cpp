@@ -37,4 +37,5 @@ void Node<T>::addEdge(Edge& edge)
 	edgeList.push_back(edge);
 }*/
 
-template class Node<int>;
+template<> class Node<int>;
+

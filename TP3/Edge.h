@@ -5,16 +5,16 @@ template <typename T>
 class Edge
 {
 public:
-	//Edge(Node<T>*, Node<T>*, int);
+	Edge(Node<T>*, Node<T>*, int);
 	Edge();
 	~Edge();
 
-	//T* getDestination();
+	Node<T>* getDestination();
 	int getCost();
 
 private:
-	//Node<T>* from;
-	//Node<T>* to;
+	Node<T>* from;
+	Node<T>* to;
 	int cost;
 };
 
