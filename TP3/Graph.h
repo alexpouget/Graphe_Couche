@@ -3,7 +3,6 @@
 #include <iostream>
 #include "Node.h"
 
-template <typename T>
 class Graph
 {
 public:

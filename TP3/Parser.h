@@ -2,7 +2,6 @@
 #include <iostream>
 #include "Graph.h"
 
-template <typename T>
 class Parser
 {
 public:
@@ -11,7 +10,7 @@ public:
 	~Parser();
 
 	//crée une verif des fichiers qui redemande a l'infini si pas trouver
-	Graph<T> Generate();
+	Graph Generate();
 
 private:
 	std::string limite;

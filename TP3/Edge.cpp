@@ -1,36 +1,34 @@
 #include "Edge.h"
 
-template<typename T>
-Edge<T>::Edge(Node<T>* f, Node<T>* t, int c)
+
+Edge::Edge(Node* f, Node* t, int c)
 {
 	from = f;
 	to = t;
 	cost = c;
 }
 
-template<typename T>
-Edge<T>::Edge()
+
+Edge::Edge()
 {
 	cost = 0;
 	to = nullptr;
 	from = nullptr;
 }
 
-template<typename T>
-Edge<T>::~Edge()
+
+Edge::~Edge()
 {
 }
 
-template<typename T>
-Node<T> * Edge<T>::getDestination()
+
+Node * Edge::getDestination()
 {
 	return to;
 }
 
-template<typename T>
-int Edge<T>::getCost()
+
+int Edge::getCost()
 {
 	return cost;
 }
-
-template class Edge<int>;

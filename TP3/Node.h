@@ -1,23 +1,24 @@
 #pragma once
 #include <iostream>
 #include <vector>
-//#include "Edge.h"
+#include "Edge.h"
 
+class Edge;
 
-template <typename T>
 class Node
 {
 public:
 	Node();
-	Node(T&);
+	Node(int&);
 	~Node();
 
-	T getContent();
-	void setContent(const T&);
+	int getContent();
+	void setContent(const int&);
 	//void addEdge(Edge<T>&);
 	
 private:
-	T content;
+	int content;
+	Edge* edge;
 	//vector<Edge<T>> edgeList;
 };
 

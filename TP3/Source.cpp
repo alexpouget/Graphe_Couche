@@ -20,8 +20,8 @@ int main() {
 	getline(cin, transition);
 	
 	Parser parser(limites, transition);*/
-	Parser<int> parser("test8_limite.afdC", "test8.afdC");
-	Graph<int> graph = parser.Generate();
+	Parser parser("test8_limite.afdC", "test8.afdC");
+	Graph graph = parser.Generate();
 
 	Help();
 	

@@ -1,20 +1,21 @@
 #pragma once
 #include "Node.h"
 
-template <typename T>
+class Node;
+
 class Edge
 {
 public:
-	Edge(Node<T>*, Node<T>*, int);
+	Edge(Node*, Node*, int);
 	Edge();
 	~Edge();
 
-	Node<T>* getDestination();
+	Node* getDestination();
 	int getCost();
 
 private:
-	Node<T>* from;
-	Node<T>* to;
+	Node* from;
+	Node* to;
 	int cost;
 };
 

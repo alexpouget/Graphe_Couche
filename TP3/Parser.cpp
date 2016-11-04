@@ -5,26 +5,25 @@
 
 using namespace std;
 
-template<typename T>
-Parser<T>::Parser()
+Parser::Parser()
 {
 	
 }
 
-template<typename T>
-Parser<T>::Parser(string l, string t)
+
+Parser::Parser(string l, string t)
 {
 	limite = l;
 	transition = t;
 }
 
-template<typename T>
-Parser<T>::~Parser()
+
+Parser::~Parser()
 {
 }
 
-template<typename T>
-Graph<T> Parser<T>::Generate()
+
+Graph Parser::Generate()
 {
 	string line;
 
@@ -44,7 +43,6 @@ Graph<T> Parser<T>::Generate()
 	}
 	inLimite.close();
 
-	return Graph<T>();
+	return Graph();
 }
 
-template class Parser<int>;
