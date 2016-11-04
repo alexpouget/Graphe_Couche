@@ -1,6 +1,7 @@
 #pragma once
 #include <map>
 #include <iostream>
+#include <string>
 #include "Node.h"
 
 class Graph
@@ -8,7 +9,10 @@ class Graph
 public:
 	Graph();
 	~Graph();
+
+	void addNode(Node&);
+	void listNode(std::ostream&);
 private:
-	//map<std::string, Node<T>> nodeList;
+	std::map<std::string, Node> nodeList;
 };
 

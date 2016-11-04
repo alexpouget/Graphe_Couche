@@ -25,6 +25,7 @@ Parser::~Parser()
 
 Graph Parser::Generate()
 {
+	Graph graph;
 	string line;
 
 	ifstream inTransition;

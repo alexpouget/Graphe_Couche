@@ -5,6 +5,7 @@
 
 class Edge;
 
+
 class Node
 {
 public:
@@ -14,12 +15,11 @@ public:
 
 	int getContent();
 	void setContent(const int&);
-	//void addEdge(Edge<T>&);
+	void addEdge(Edge*);
 	
 private:
 	int content;
-	Edge* edge;
-	//vector<Edge<T>> edgeList;
+	std::vector<Edge*> edgeList;
 };
 
 

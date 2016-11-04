@@ -11,15 +11,15 @@ void Cmd(char& choice);
 int main() {
 	cout << "Bonjour bienvenue : " << endl << endl;
 	
-	/*
+	
 	cout << "nom du fichier contenant les limites : " << endl;
 	string limites;
-	getline(cin, limites);
+	//getline(cin, limites);
 	cout << "nom du fichier contenant les transitions : " << endl;
 	string transition;
-	getline(cin, transition);
+	//getline(cin, transition);
 	
-	Parser parser(limites, transition);*/
+	//Parser parser(limites, transition);*/
 	Parser parser("test8_limite.afdC", "test8.afdC");
 	Graph graph = parser.Generate();
 

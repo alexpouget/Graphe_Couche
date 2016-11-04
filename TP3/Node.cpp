@@ -29,8 +29,8 @@ void Node::setContent(const int& c)
 	content = c;
 }
 
-/*
-void Node::addEdge(Edge& edge)
+
+void Node::addEdge(Edge* e)
 {
-	edgeList.push_back(edge);
-}*/
+	edgeList.push_back(e);
+}
