@@ -1,3 +1,4 @@
-﻿  Graph.cpp
+﻿  Finder.cpp
+c:\users\w10\documents\visual studio 2015\projects\tp3\tp3\finder.cpp(58): warning C4018: '<' : incompatibilité signed/unsigned
   TP3.vcxproj -> C:\Users\W10\documents\visual studio 2015\Projects\TP3\Debug\TP3.exe
   TP3.vcxproj -> C:\Users\W10\documents\visual studio 2015\Projects\TP3\Debug\TP3.pdb (Full PDB)

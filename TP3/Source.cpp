@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "Parser.h"
 #include "Node.h"
 
@@ -7,6 +8,8 @@ using namespace std;
 
 void Help();
 void Cmd(char& choice);
+void writeFile();
+Graph* graph;
 
 int main() {
 	cout << "Bonjour bienvenue : " << endl << endl;
@@ -20,9 +23,12 @@ int main() {
 	//getline(cin, transition);
 	
 	//Parser parser(limites, transition);*/
-	Parser parser("test8_limite.afdC", "test8.afdC");
-	Graph graph = parser.Generate();
-
+	Parser parser("test10_limite.afdC", "test10.afdC");
+	Graph graph2 = parser.generateGraph();
+	
+	Finder finder = parser.generateFinder();
+	finder.Recherche(graph2, cout);
+	graph = &graph2;
 	Help();
 	
 	system("PAUSE");
@@ -63,9 +69,13 @@ void Cmd(char& choice) {
 		break;
 	case 'G':
 		cout << "Execution graphe" << endl;
+		graph->listNode(cout);
+		Help();
 		break;
 	case 'F':
 		cout << "Execution fichier" << endl;
+		writeFile();
+		Help();
 		break;
 	case 'P':
 		cout << "Execution plus court chemin" << endl;
@@ -88,4 +98,12 @@ void Cmd(char& choice) {
 		Help();
 		break;
 	}
+}
+
+void writeFile() {
+	ofstream out;
+	out.open("out.txt");
+	graph->listNode(out);
+	out.close();
+	cout << "noeud ecris dans fichier out.txt" << endl << endl;
 }

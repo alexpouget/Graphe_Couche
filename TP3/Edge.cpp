@@ -1,11 +1,12 @@
 #include "Edge.h"
 
 
-Edge::Edge(Node* f, Node* t, int c)
+Edge::Edge(Node* f, Node* t, int c,int l)
 {
 	from = f;
 	to = t;
 	cost = c;
+	letter = l;
 }
 
 

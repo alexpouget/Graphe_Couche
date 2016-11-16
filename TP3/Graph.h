@@ -12,6 +12,8 @@ public:
 
 	void addNode(Node&);
 	void listNode(std::ostream&);
+
+	Node* getNode(std::string);
 private:
 	std::map<std::string, Node> nodeList;
 };

@@ -8,9 +8,11 @@ Node::Node()
 	
 }
 
-Node::Node(int& c)
+Node::Node(int c)
 {
 	content = c;
+	init = false;
+	finish = false;
 }
 
 
@@ -33,4 +35,29 @@ void Node::setContent(const int& c)
 void Node::addEdge(Edge* e)
 {
 	edgeList.push_back(e);
+}
+
+bool Node::isFinal()
+{
+	return finish;
+}
+
+void Node::setFinal(const bool &f)
+{
+	finish = f;
+}
+
+bool Node::isInit()
+{
+	return init;
+}
+
+void Node::setInit(const bool &i)
+{
+	init = i;
+}
+
+std::vector<Edge*> Node::getEdgeList()
+{
+	return edgeList;
 }

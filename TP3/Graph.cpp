@@ -22,3 +22,9 @@ void Graph::listNode(std::ostream & stream)
 	}
 }
 
+Node* Graph::getNode(std::string key)
+{
+	Node* node = &(nodeList.find(key)->second);
+	return node;
+}
+
