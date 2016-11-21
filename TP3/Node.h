@@ -11,19 +11,20 @@ class Node
 public:
 	Node();
 	Node(int);
+	//Node(Node const &);
 	~Node();
 
 	int getContent();
 	void setContent(const int&);
-	void addEdge(Edge*);
+	void addEdge(Edge);
 	bool isFinal();
 	void setFinal(const bool&);
 	bool isInit();
 	void setInit(const bool&);
-	std::vector<Edge*> getEdgeList();
+	std::vector<Edge> getEdgeList();
 private:
 	int content;
-	std::vector<Edge*> edgeList;
+	std::vector<Edge> edgeList;
 	bool finish;
 	bool init;
 };

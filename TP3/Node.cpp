@@ -16,6 +16,7 @@ Node::Node(int c)
 }
 
 
+
 Node::~Node()
 {
 }
@@ -32,7 +33,7 @@ void Node::setContent(const int& c)
 }
 
 
-void Node::addEdge(Edge* e)
+void Node::addEdge(Edge e)
 {
 	edgeList.push_back(e);
 }
@@ -57,7 +58,7 @@ void Node::setInit(const bool &i)
 	init = i;
 }
 
-std::vector<Edge*> Node::getEdgeList()
+std::vector<Edge> Node::getEdgeList()
 {
 	return edgeList;
 }

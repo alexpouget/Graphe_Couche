@@ -23,7 +23,7 @@ int main() {
 	//getline(cin, transition);
 	
 	//Parser parser(limites, transition);*/
-	Parser parser("test10_limite.afdC", "test10.afdC");
+	Parser parser("test23_limite.afdC", "test23.afdC");
 	Graph graph2 = parser.generateGraph();
 	
 	Finder finder = parser.generateFinder();

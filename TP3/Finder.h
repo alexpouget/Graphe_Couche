@@ -7,14 +7,19 @@ class Finder
 public:
 	Finder();
 	~Finder();
-	Finder(int&, int&, int*, int*);
+	Finder(Finder const & source);
+	Finder(int&, int&, std::vector<int>, std::vector<int>);
 
 	void plusCourtChemin(Graph&, std::ostream &);
 	void Recherche(Graph&, std::ostream &);
-	void r(std::vector<Edge*>);
+	int getAlphabet();
+	int getSize();
+	std::vector<Edge> r(std::vector<Edge>, std::vector<int>,Graph);
+	bool minLetter(std::vector<int> util);
+	int getCost(std::vector<Edge> v);
 private:
-	int* minimal;
-	int* maximal;
+	std::vector<int> minimal;
+	std::vector<int> maximal;
 	int size;
 	int alphabet;
 };

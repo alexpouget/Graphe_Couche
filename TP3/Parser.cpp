@@ -112,7 +112,7 @@ Graph Parser::generateGraph()
 				break;
 			}
 			Edge edge(from, to, cost,letter);
-			from->addEdge(&edge);
+			from->addEdge(edge);
 
 		}
 		count++;
@@ -134,34 +134,39 @@ Finder Parser::generateFinder()
 	getline(inLimite, line);//first line aplphabet
 	alphabet = atoi(line.c_str());
 	getline(inLimite, line);//second line size mot
-	alphabet = atoi(line.c_str());
+	size = atoi(line.c_str());
 
 	//tableau
-	int* min = new int[alphabet];
-	int* max = new int[alphabet];
-	int c = 0;
-	while (inLimite) {
-		getline(inLimite, line);
-		cout << line << endl;
-		string num = "";
-		int count = 0;
-		for (int i = 0; i < line.size(); i++) {
-			if (' ' == line[i]) {
-				
-				if (0 == c) {
-					min[count] = atoi(num.c_str());
-				}
-				else {
-					max[count] = atoi(num.c_str());
-				}
-				count++;
-				num = "";
-				continue;
-			}
-			//num += line[i];
+	std::vector<int> min;
+	std::vector<int> max;
+	
+	getline(inLimite, line);
+	cout << line << endl;
+	string num = "";
+		
+	for (int i = 0; i < line.size(); i++) {
+		if (' ' == line[i]) {
+			min.push_back(atoi(num.c_str()));
+			num = "";
+			continue;
 		}
-		c++;
+		num += line[i];
 	}
+	min.push_back(atoi(num.c_str()));
+	
+	getline(inLimite, line);
+	cout << line << endl;
+	num = "";
+
+	for (int i = 0; i < line.size(); i++) {
+		if (' ' == line[i]) {
+			max.push_back(atoi(num.c_str()));
+			num = "";
+			continue;
+		}
+		num += line[i];
+	}
+	max.push_back(atoi(num.c_str()));
 	inLimite.close();
 
 	return Finder(size,alphabet,min,max);
