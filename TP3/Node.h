@@ -22,6 +22,7 @@ public:
 	bool isInit();
 	void setInit(const bool&);
 	std::vector<Edge> getEdgeList();
+	bool operator == (const Node&) const;
 private:
 	int content;
 	std::vector<Edge> edgeList;

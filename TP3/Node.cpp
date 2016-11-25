@@ -62,3 +62,11 @@ std::vector<Edge> Node::getEdgeList()
 {
 	return edgeList;
 }
+
+bool Node::operator==(const Node & other) const
+{
+	if (content == other.content) {
+		return true;
+	}
+	return false;
+}

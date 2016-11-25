@@ -1,3 +1,10 @@
-﻿  Source.cpp
+﻿  Finder.cpp
+c:\users\w10\documents\visual studio 2015\projects\tp3\tp3\finder.cpp(55): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\w10\documents\visual studio 2015\projects\tp3\tp3\finder.cpp(59): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\w10\documents\visual studio 2015\projects\tp3\tp3\finder.cpp(101): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\w10\documents\visual studio 2015\projects\tp3\tp3\finder.cpp(105): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\w10\documents\visual studio 2015\projects\tp3\tp3\finder.cpp(119): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\w10\documents\visual studio 2015\projects\tp3\tp3\finder.cpp(155): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\w10\documents\visual studio 2015\projects\tp3\tp3\finder.cpp(184): warning C4018: '<' : incompatibilité signed/unsigned
   TP3.vcxproj -> C:\Users\W10\documents\visual studio 2015\Projects\TP3\Debug\TP3.exe
   TP3.vcxproj -> C:\Users\W10\documents\visual studio 2015\Projects\TP3\Debug\TP3.pdb (Full PDB)

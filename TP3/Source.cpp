@@ -9,7 +9,10 @@ using namespace std;
 void Help();
 void Cmd(char& choice);
 void writeFile();
+void writeShortPath();
+void recherche();
 Graph* graph;
+Finder finder;
 
 int main() {
 	cout << "Bonjour bienvenue : " << endl << endl;
@@ -23,11 +26,9 @@ int main() {
 	//getline(cin, transition);
 	
 	//Parser parser(limites, transition);*/
-	Parser parser("test23_limite.afdC", "test23.afdC");
+	Parser parser("test11limite.afdC", "test11.afdC");
 	Graph graph2 = parser.generateGraph();
-	
-	Finder finder = parser.generateFinder();
-	finder.Recherche(graph2, cout);
+	finder = parser.generateFinder();
 	graph = &graph2;
 	Help();
 	
@@ -41,7 +42,7 @@ void Help() {
 	cout << "H - Help : affiche la liste des commandes" << endl;
 	cout << "G - Graphe : afficher a l'ecran les noeuds" << endl;
 	cout << "F - Fichier : ecrit les noeuds dans un fichier" << endl;
-	cout << "P - Plus court chemin :  calculer le plus court chemin" << endl;
+	//cout << "P - Plus court chemin :  calculer le plus court chemin" << endl;
 	cout << "A - Afficher : afficher les plus courts chemins" << endl;
 	cout << "E - Ecrire : ecrire dans un fichier" << endl;
 	cout << "R - Recherche : recherche arrete" << endl;
@@ -82,12 +83,18 @@ void Cmd(char& choice) {
 		break;
 	case 'A':
 		cout << "Execution afficher" << endl;
+		finder.Recherche(*graph, cout);
+		Help();
 		break;
 	case 'E':
 		cout << "Execution ecrire" << endl;
+		writeShortPath();
+		Help();
 		break;
 	case 'R':
 		cout << "Execution recherche" << endl;
+		recherche();
+		Help();
 		break;
 	case 'Q':
 		cout << "Execution quitter" << endl;
@@ -106,4 +113,27 @@ void writeFile() {
 	graph->listNode(out);
 	out.close();
 	cout << "noeud ecris dans fichier out.txt" << endl << endl;
+}
+
+void writeShortPath()
+{
+	ofstream out;
+	out.open("out.txt");
+	finder.Recherche(*graph, out);
+	out.close();
+	cout << "plus court chemin ecris dans fichier out.txt" << endl << endl;
+}
+
+void recherche() {
+	cout << "point de depart : " << endl;
+	string start;
+	getline(cin, start);
+	
+	cout << "point d'arrivé : " << endl;
+	string end;
+	getline(cin, end);
+	cout << endl << endl; 
+	int nstart = atoi(start.c_str());
+	int nfin = atoi(end.c_str());
+	finder.rechercheEdge(*graph, nstart, nfin);
 }
